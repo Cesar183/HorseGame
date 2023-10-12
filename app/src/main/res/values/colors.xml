@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="app_color_dark">#1B190F</color>
+    <color name="app_color_regular">#776E65</color>
+    <color name="app_color_light">#FAF8EF</color>
+
+    <color name="black_cell">#423327</color>
+    <color name="white_cell">#EFCF9b</color>
+    <color name="white_cell_premium">#EAF7E0</color>
+    <color name="black_cell_premium">#185303</color>
+
+    <color name="contrast_data">#A40D0D</color>
+    <color name="contrast_data_premium">#17711B</color>
+    <color name="selected_cell">#02C7DA</color>
+    <color name="previous_cell">#FFA500</color>
+    <color name="enabled_cell">#1775A4</color>
+    <color name="message_bg">#CDFAF8EF</color>
+
+
+</resources>

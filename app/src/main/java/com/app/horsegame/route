@@ -1,0 +1,28 @@
+1 - mejorar las funcionalidades existentes. QUE FUNCIONE
+2 - Mejorar la UX de las funcionalidades existentes
+3 - Añadir nuevas funcionalidades
+
+ERRORES
+-
+-
+-
+-
+
+MEJORAS UX
+- Un color para el punto actual y otro para el rastro
+- Mostrar opciones de movimiento
+-
+-
+
+FUNCIONALIDADES
+- Inicio aleatorio
+- Poder mover el caballo
+- Pintar niveles(y limpiarlos)
+- Control de movimientos
+- Control de opciones
+- Control de tiempo
+- Control de vidas
+- Mostrar publicidad
+- Permitir pagar por ser premium
+- Habilitar accesos de premium a mas niveles y desabilitar publicidad
+- Opcion de compartir resultados
