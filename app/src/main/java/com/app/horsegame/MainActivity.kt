@@ -117,11 +117,40 @@ class MainActivity : AppCompatActivity() {
         paintHorseCell(x, y, "selected_cell")
         checkOption(x,y)
         if(moves > 0){
-            checkNewBonus()
-            //checkGameOver()
+            //checkNewBonus()
+            checkGameOver(x, y)
         } else{
-            //checkSuccesFullEnd()
+            showMessage ("You Win", "Next level", false)
         }
+    }
+
+    private fun checkGameOver(x: Int, y: Int) {
+        if(options == 0){
+            showMessage ("Game Over", "Try Again", true)
+        }
+    }
+
+    private fun showMessage(title: String, action: String, gameOver: Boolean) {
+        var lyMessage = findViewById<LinearLayout>(R.id.lyMessage)
+        lyMessage.visibility = View.VISIBLE
+
+        var tvTitleMessage = findViewById<TextView>(R.id.tvTitleMessage)
+        tvTitleMessage.text = title
+
+        var score = ""
+        var tvTimeData = findViewById<TextView>(R.id.tvTimeData)
+        if(gameOver){
+            score = "Score: " + (levelMoves - moves) + " / " + levelMoves
+        }else{
+            score = tvTimeData.text.toString()
+        }
+        var tvScoreMessage = findViewById<TextView>(R.id.tvScoreMessage)
+        tvScoreMessage.text = score
+
+        var tvAction = findViewById<TextView>(R.id.tvAction)
+        tvAction.text = action
+
+
     }
 
     private fun checkNewBonus() {
@@ -226,10 +255,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun initScreenGame(){
         setSizeboard()
-        hideMesage()
+        hideMessage()
     }
 
-    private fun hideMesage() {
+    private fun hideMessage() {
         var lyMessage = findViewById<LinearLayout>(R.id.lyMessage)
         lyMessage.visibility = View.INVISIBLE
     }
