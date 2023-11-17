@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     private var levelMoves = 64
     private var mHandler: Handler? = null
     private var timeInSeconds: Long = 0
+    private var gaming = true
 
     private var nameColorBlack = "black_cell"
     private var nameColorWhite = "white_cell"
@@ -34,8 +35,11 @@ class MainActivity : AppCompatActivity() {
     private var chronometer: Runnable = object: Runnable{
         override fun run() {
             try {
-                timeInSeconds++
-                updateStopWatchView(timeInSeconds)
+                if(gaming){
+                    timeInSeconds++
+                    updateStopWatchView(timeInSeconds)
+                }
+
             }finally {
                 mHandler!!.postDelayed(this, 1000L)
             }
@@ -49,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         startGame()
     }
     private fun startGame(){
+        gaming = true
         resetBoard()
         clearBoard()
         setFirstPosition()
@@ -310,6 +315,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun showMessage(title: String, action: String, gameOver: Boolean) {
+        gaming = false
         var lyMessage = findViewById<LinearLayout>(R.id.lyMessage)
         lyMessage.visibility = View.VISIBLE
 
